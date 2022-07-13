@@ -1,9 +1,12 @@
-import React from "react";
-import logo from "./logo.svg";
+import React, { useState } from "react";
 import "./App.css";
+import SaveManager from "./components/SaveManager";
 
 function App() {
-    return <div className="App"></div>;
+    const [save, setSave] = useState(null);
+    return (
+        <div className="App">{!save && <SaveManager setSave={setSave} />}</div>
+    );
 }
 
 export default App;
