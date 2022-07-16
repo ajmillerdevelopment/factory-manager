@@ -1,10 +1,15 @@
 export interface ISave {
     saveName: string;
-    saveId: number;
-    userName: string;
+    saveId: string;
+    // userName: string;
     created: number;
     lastSaved: number;
-    tags: Array<ITag>;
+    userTags: Array<ITag>;
+    reference: {
+        tags: Array<ITag>;
+        equipment: Array<IEquipment>;
+        units: Array<IUnit>;
+    };
 }
 export interface ITag {
     tagName: string;

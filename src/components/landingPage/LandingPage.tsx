@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import newSave from "../../helpers/newSave";
 
 export default function LandingPage() {
+    const [gameName, setGameName] = useState("");
     return (
         <div className="flex page flex-col items-center">
             <header className="mt-24 flex flex-col items-center">
@@ -37,6 +39,9 @@ export default function LandingPage() {
                         <button
                             className="border border-slate-500 flex flex-col items-center w-4/12 m-4"
                             id="vanilla-button"
+                            onClick={() => {
+                                newSave(true, gameName);
+                            }}
                         >
                             <h3 className="font-display text-4xl mt-4">
                                 Vanilla
@@ -49,6 +54,9 @@ export default function LandingPage() {
                         <button
                             className="border border-slate-500 flex flex-col items-center w-4/12 m-4"
                             id="vanilla-button"
+                            onClick={() => {
+                                newSave(false, gameName);
+                            }}
                         >
                             <h3 className="font-display text-4xl mt-4">
                                 Blank
