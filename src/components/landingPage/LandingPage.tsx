@@ -4,7 +4,9 @@ export default function LandingPage() {
     return (
         <div>
             <header>
-                <h1>HOI4 Production Manager</h1>
+                <h1 className="underline font-display">
+                    HOI4 Production Manager
+                </h1>
                 <a href="https://github.com/ajmillerdevelopment/factory-manager">
                     https://github.com/ajmillerdevelopment/factory-manager
                 </a>
