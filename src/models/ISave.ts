@@ -7,7 +7,7 @@ export interface ISave {
     userTags: Array<ITag>;
     reference: {
         tags: Array<ITag>;
-        equipment: Array<IEquipment>;
+        equipment: Array<IEquipmentType>;
         units: Array<IUnit>;
     };
 }
@@ -27,8 +27,11 @@ export interface ITemplate {
 }
 export interface IEquipment {
     equipmentName: string;
-    equipmentId: number;
     cost: number;
+}
+export interface IEquipmentType {
+    equipmentTypeName: string;
+    equipment: Array<IEquipment>;
 }
 export interface IProdBlock {
     template: ITemplate;
@@ -43,6 +46,5 @@ export interface ISupplyData {
 }
 export interface IUnit {
     unitName: string;
-    unitId: number;
-    neededEquipment: Array<{ equipment: IEquipment; quantity: number }>;
+    neededEquipment: Array<{ equipment: IEquipmentType; quantity: number }>;
 }

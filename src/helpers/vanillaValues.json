@@ -1,0 +1,29 @@
+{
+    "tags": {
+        "AFG": "Afghanistan",
+        "ALB": "Albania",
+        "ARG": "Argentina",
+        "AST": "Australia",
+        "AUS": "Austria",
+        "BEL": "Belgium",
+        "BHU": "Bhutan",
+        "BOL": "Bolivia",
+        "BRA": "Brazil",
+        "MAL": "British Malaya",
+        "RAJ": "British Raj",
+        "BUL": "Bulgaria",
+        "CAN": "Dominion of Canada"
+    },
+    "equipment": {
+        "Infantry Equipment": {
+            "Infantry Equipment 1": 0.43,
+            "Infantry Equipment 2": 0.5,
+            "Infantry Equipment 3": 0.58,
+            "Infantry Equipment 4": 0.69
+        }
+    },
+    "units": {
+        "Infantry": [{ "name": "Infantry Equipment", "quant": 100 }],
+        "Marines": [{ "name": "Infantry Equipment", "quant": 150 }]
+    }
+}
