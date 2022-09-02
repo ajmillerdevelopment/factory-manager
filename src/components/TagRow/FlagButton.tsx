@@ -1,5 +1,5 @@
 import React from "react";
-import { ITag } from "../../../models/ISave";
+import { ITag } from "../../models/ISave";
 
 type flagButtonProps = {
     setActiveTag: React.Dispatch<React.SetStateAction<ITag | null>>;

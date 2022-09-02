@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import newSave from "../../helpers/newSave";
+import { ISave } from "../../models/ISave";
 
-export default function LandingPage() {
+type landingPageProps = {
+    setGame: React.Dispatch<React.SetStateAction<ISave | null>>;
+};
+
+export default function LandingPage(props: landingPageProps) {
+    const { setGame } = props;
     const [gameName, setGameName] = useState("");
     return (
         <div className="flex page flex-col items-center">
@@ -40,7 +46,7 @@ export default function LandingPage() {
                             className="border border-slate-500 flex flex-col items-center w-4/12 m-4"
                             id="vanilla-button"
                             onClick={() => {
-                                newSave(true, gameName);
+                                setGame(newSave(true, gameName));
                             }}
                         >
                             <h3 className="font-display text-4xl mt-4">
@@ -55,7 +61,7 @@ export default function LandingPage() {
                             className="border border-slate-500 flex flex-col items-center w-4/12 m-4"
                             id="vanilla-button"
                             onClick={() => {
-                                newSave(false, gameName);
+                                setGame(newSave(false, gameName));
                             }}
                         >
                             <h3 className="font-display text-4xl mt-4">
