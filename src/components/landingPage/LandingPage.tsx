@@ -12,7 +12,7 @@ export default function LandingPage(props: landingPageProps) {
     return (
         <div className="flex page flex-col items-center">
             <header className="mt-24 flex flex-col items-center">
-                <h1 className="underline font-display text-7xl">
+                <h1 className="font-display text-7xl">
                     HOI4 Production Manager
                 </h1>
                 <a
@@ -36,6 +36,7 @@ export default function LandingPage(props: landingPageProps) {
                         placeholder="Your Game Name"
                         id="game-name-input"
                         className="mt-2"
+                        onChange={(e) => setGameName(e.target.value)}
                     />
                     <p className="mt-4 font-body">Choose your preset:</p>
                     <div
