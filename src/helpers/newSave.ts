@@ -39,16 +39,6 @@ const populateVanillaValues = () => {
     };
 };
 
-const download = (file: ISave, saveName: string) => {
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(
-        new Blob([JSON.stringify(file)], { type: "application/json" })
-    );
-    a.download = `${saveName}.json`;
-    a.click();
-    a.remove();
-};
-
 export default function newSave(vanilla: boolean, saveName: string) {
     if (vanilla) {
         const timeStamp = Date.now();
@@ -60,8 +50,6 @@ export default function newSave(vanilla: boolean, saveName: string) {
             userTags: [],
             reference: populateVanillaValues(),
         } as unknown as ISave;
-        // const downloadTrigger = document.createElement('button')
-        download(newSave, saveName);
         return newSave;
     } else {
         const timeStamp = Date.now();
@@ -77,8 +65,6 @@ export default function newSave(vanilla: boolean, saveName: string) {
                 units: [],
             },
         } as ISave;
-        // const downloadTrigger = document.createElement('button')
-        download(newSave, saveName);
         return newSave;
     }
 }
